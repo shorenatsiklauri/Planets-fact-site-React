@@ -1,4 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=League+Spartan:wght@400;700&display=swap");
+
+* {
+  color: none;
+  margin: none;
+  border-radius: none;
+}
 .card {
   background: #070724;
+  color: #ffffff;
+  font-family: "League Spartan", sans-serif;
+}
+
+.headerspace {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: "League Spartan", sans-serif;
+  color: #ffffff;
+  border-bottom: 0.1px solid gray;
+}
+
+.barbox {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 20px;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 25px;
+  /* identical to box height, or 227% */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  font-family: "League Spartan", sans-serif;
+}
+
+h1 {
+  font-family: "Antonio";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+
   color: #ffffff;
 }
