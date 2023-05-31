@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import PlanetData from "../data.json";
+import { useParams } from "react-router-dom";
+import "./Pages.css";
+
 
 const PlanetEarth = () => {
-  const earthPlanet = PlanetData.find((planet) => planet.name === "Earth");
-
+  let {id} =useParams();
+  const earthPlanet = PlanetData.find((planet) => planet.name === id);
+  console.log(earthPlanet);
+  
+ console.log(id);
   return (
     <div>
       <PlanetFact planet={earthPlanet} />
@@ -24,36 +30,39 @@ const PlanetFact = ({ planet }) => {
       <div className="informationalbox">
       <div className="boxforpicture">
   {activeTab === "overview" && (
-  <img src={planet.images.planet} alt={`${planet.name} planet`} style={{ width: "450px" }}/>
+  <img src={planet.images.planet} alt={`${planet.name} planet`} style={{ width: "450px", height: "450px" }}/>
+ 
   )}
   {activeTab === "structure" && (
-    <img src={planet.images.internal} alt={`${planet.name} internal`} />
+    <img src={planet.images.internal} alt={`${planet.name} internal`} style={{ width: "450px", height: "450px" }}/>
   )}
   {activeTab === "geology" && (
-    <div>
-      <img src={planet.images.planet} alt={`${planet.name} planet`} style={{ width: "70%" }}/>
-      <img src={planet.images.geology} alt={`${planet.name} geology`} style={{ width: "30%", marginLeft: "-210px" }} />
+    <div className="twopictures">
+      <img src={planet.images.planet} alt={`${planet.name} planet`} style={{ width: "450px", height: "450px" }}/>
+      <img src={planet.images.geology} alt={`${planet.name} geology`} style={{ width: "40%", marginLeft: "120px" , marginTop: "-150px"}} />
     </div>
   )}
 </div>
         <div className="boxforsourses">
           <h2>{planet.name}</h2>
-          <div className="boxeslikebutton">
+          <div> {activeTab === "overview" ? <div className="textbox"><p>{planet.overview.content}</p></div> : activeTab === "structure" ? <div className="textbox"> <p>{planet.structure.content}</p></div> :<div className="textbox"><p>{planet.geology.content} </p></div>} </div>
+          <div className="boxeslikebutton" style={{ background: `hover ${planet.color}` }}>
             <div onClick={() => handleTabClick("overview")}>Overview</div>
           </div>
-          {activeTab === "overview" && <div className="textbox"><p>{planet.overview.content}</p></div>}
+         
           <a href={planet.overview.source}>Source: Wikipedia</a>
 
-          <div className="boxeslikebutton">
+          <div className="boxeslikebutton" style={{ background: `hover ${planet.color}` }}>
+
             <div onClick={() => handleTabClick("structure")}>Structure</div>
           </div>
-         {activeTab === "structure" &&  <div className="textbox"> <p>{planet.structure.content}</p></div>}
+       
           <a href={planet.structure.source}>Source: Wikipedia</a>
 
-          <div className="boxeslikebutton">
+              <div className="boxeslikebutton" style={{ background: planet.color }}>
             <div onClick={() => handleTabClick("geology")}>Geology</div>
           </div>
-          {activeTab === "geology" && <div className="textbox"><p>{planet.geology.content} </p></div>}
+       
           <a href={planet.geology.source}>Source: Wikipedia</a>
         </div>
       </div>

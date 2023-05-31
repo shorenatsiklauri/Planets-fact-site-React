@@ -136,4 +136,27 @@ a {
   /* or 179% */
 
   color: #ffffff;
+  margin-top: -50px;
+}
+h2 {
+  font-family: "Antonio";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 105px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.smallboxes h1 {
+  color: #ffffff;
+}
+.twopictures {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
 }
