@@ -33,8 +33,5 @@ Users should be able to:
 
 ### What I learned
 
-````React 🎉
-
-```Javascript 🎉
-
-````
+-React 🎉
+-Javascript 🎉
