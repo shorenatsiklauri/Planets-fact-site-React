@@ -58,7 +58,7 @@ h3 {
   top: 840px;
   border-radius: 0px;
   mix-blend-mode: normal;
-  opacity: 0.2;
+  opacity: 0.5;
   border: 1px solid #ffffff;
   margin: 20px;
   display: flex;
@@ -131,12 +131,19 @@ a {
   font-family: "Spartan";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 25px;
   /* or 179% */
 
   color: #ffffff;
   margin-top: -50px;
+
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 22px;
+  /* or 200% */
+
+  text-align: center;
 }
 h2 {
   font-family: "Antonio";
@@ -159,4 +166,114 @@ h2 {
   justify-content: center;
   flex-direction: column;
   gap: 50px;
+}
+
+.threebuttonbox {
+  display: none;
+}
+
+.imgplanets {
+  width: 450px;
+  height: 450px;
+}
+
+.smallimggeology {
+  width: 150px;
+  height: auto;
+  margin-top: -130px;
+  margin-left: 150px;
+}
+
+@media (max-width: 640px) {
+  img {
+    width: 20px;
+  }
+
+  .informationalbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .smallboxes {
+    height: 26px;
+    width: 279px;
+    left: 48px;
+    top: 696px;
+    border-radius: 0px;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border: 1px solid #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .smallboxes h1 {
+    font-family: Antonio;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.75px;
+    text-align: right;
+  }
+  .boxeslikebutton {
+    height: 10px;
+    width: 80px;
+    left: 271px;
+    top: 89px;
+    border-radius: nullpx;
+    border: none;
+    background-color: none;
+  }
+
+  .rotationandtemperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .threebuttonbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 15px;
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 10px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 1.92857px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+
+  .imgplanets {
+    width: 173px;
+    height: 173px;
+  }
+
+  .smallimggeology {
+    width: 70px;
+    height: auto;
+    margin-top: -100px;
+    margin-left: 50px;
+  }
+  h2 {
+    margin-top: -15px;
+    font-size: 50px;
+  }
 }
