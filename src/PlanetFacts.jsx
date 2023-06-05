@@ -35,7 +35,7 @@ const PlanetFacts = () => {
     <div className="nameandball" key={planet.name}>
       <div className="smallbolls" style={{ background: planet.color }}></div>
       <div className="testit">
-  <li style={{ fontSize: "15px", color: "white", textTransform: "uppercase", fontWeight: "700", borderBottom: "none" }}>
+      <li style={{ fontSize: "15px", color: "white", textTransform: "uppercase", fontWeight: "700", borderBottom: "none", textDecoration: "none", margin: "0", padding: "0", border: "none", outline: "none" }}>
     <Link to={`/planet/${planet.name}`}>{planet.name}</Link>
   </li>
 </div>

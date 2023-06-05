@@ -29,6 +29,7 @@ const PlanetFact = ({ planet }) => {
     geology: ""
   });
 
+  console.log(buttonBackground.overview);
 
   return (
     <div>
@@ -46,7 +47,7 @@ const PlanetFact = ({ planet }) => {
  
   )}
   {activeTab === "structure" && (
-    <img  className="imgplanets" src={planet.images.planet} alt={`${planet.name} planet`}/>
+    <img  className="imgplanets" src={planet.images.internal} alt={`${planet.name} planet`}/>
   )}
   {activeTab === "geology"  && (
     <div className="twopictures">
@@ -61,16 +62,16 @@ const PlanetFact = ({ planet }) => {
           <div> {activeTab === "overview" ? <div className="textbox"><p>{planet.overview.content}</p> <a href={planet.overview.source}>Source: Wikipedia</a> </div> : activeTab === "structure" ? <div className="textbox"> <p>{planet.structure.content}</p>     <a href={planet.structure.source}>Source: Wikipedia</a></div> :<div className="textbox"><p>{planet.geology.content} </p>          <a href={planet.geology.source}>Source: Wikipedia</a></div>} </div>
          
          <div className="threeboxeslikebuttons">
-         <div className="boxeslikebutton" style={{ background: activeTab === "overview" ? buttonBackground.overview : "" }}>
+         <div className="boxeslikebutton" style={{ background: activeTab === "overview" && planet.color  }}>
     <div onClick={() => handleTabClick("overview")}>Overview</div>
   </div>
 
               
-          <div className="boxeslikebutton" style={{ background: `hover ${planet.color}` }}>
+          <div className="boxeslikebutton" style={{ background: activeTab === "structure" && planet.color  }}>
             <div onClick={() => handleTabClick("structure")}>Structure</div>
           </div>
              
-              <div className="boxeslikebutton" style={{ background: planet.color }}>
+              <div className="boxeslikebutton" style={{ background: activeTab === "geology" && planet.color }}>
             <div onClick={() => handleTabClick("geology")}>Geology</div>
           </div>
           </div>

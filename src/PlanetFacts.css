@@ -4,13 +4,17 @@
   color: none;
   margin: none;
   border-radius: none;
+  outline: "none";
+  text-decoration: none;
 }
 .card {
   background: #070724;
   color: #ffffff;
   font-family: "League Spartan", sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 .headerspace {
   display: flex;
   justify-content: space-between;
@@ -139,7 +143,9 @@ h1 {
   .planetlist.hide {
     display: none;
   }
+
   .testit {
     border: none;
+    text-decoration: none;
   }
 }

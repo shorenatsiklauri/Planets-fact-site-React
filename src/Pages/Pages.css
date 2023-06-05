@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan&display=swap");
-
+* {
+  text-decoration: none;
+}
 h3 {
   color: red;
 }
@@ -184,6 +186,12 @@ h2 {
   margin-left: 150px;
 }
 
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
 @media (max-width: 640px) {
   img {
     width: 20px;
