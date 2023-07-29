@@ -18,10 +18,10 @@ const PlanetFacts = () => {
     <Router>
       <div>
         <div className="card">
-          <div className="headerspace">
+          <div className="headerspace" >
             <div className="menue">
               <h1 style={{ marginLeft: "10px" }}>THE PLANETS</h1>
-              <div className="boxforsvg" onClick={handleBarClick}>
+              <div className="boxforsvg" style={{cursor:"pointer" }} onClick={handleBarClick}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
                   <g fill="#FFF" fillRule="evenodd">
                     <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z"></path>

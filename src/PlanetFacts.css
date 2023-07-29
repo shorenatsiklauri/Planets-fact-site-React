@@ -6,6 +6,14 @@
   border-radius: none;
   outline: "none";
   text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: none;
+  overflow-x: hidden;
 }
 .card {
   background: #070724;
@@ -17,6 +25,7 @@ a {
 }
 .headerspace {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   flex-direction: row;
   font-family: "League Spartan", sans-serif;

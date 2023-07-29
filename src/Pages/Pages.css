@@ -25,6 +25,7 @@ h3 {
 
   letter-spacing: 2.57143px;
   text-transform: uppercase;
+  cursor: pointer;
 
   color: #ffffff;
 }
@@ -239,6 +240,7 @@ ul {
     border-radius: nullpx;
     border: none;
     background-color: none;
+    cursor: pointer;
   }
 
   .rotationandtemperature {
@@ -265,6 +267,7 @@ ul {
     text-align: center;
     letter-spacing: 1.92857px;
     text-transform: uppercase;
+    cursor: pointer;
 
     color: #ffffff;
   }
